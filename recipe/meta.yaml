@@ -1,5 +1,5 @@
 {% set name = "tensordict" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
   url: https://github.com/pytorch-labs/tensordict/archive/v{{ version }}.tar.gz
-  sha256: 1179d48ac246a80c6c507ebbe445e0e25fd9f95af700bfb5dbe7725e8de518e3
+  sha256: b0d8ff823cc556c317fce3f9c26234305a5196e73939cc186a2be01aa3fb1347
 
 build:
   number: 0
