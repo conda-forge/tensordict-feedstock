@@ -22,6 +22,7 @@ abstracting away tailored operations:
 
 ```python
 for i, tensordict in enumerate(dataset):
+
     tensordict = model(tensordict)
     loss = loss_module(tensordict)
     loss.backward()
@@ -38,6 +39,7 @@ among many others.
 PyPI: [https://pypi.org/project/tensordict/](https://pypi.org/project/tensordict/)
 
 ---
+
 
 
 :fire: The conda-forge recipe was generated with [Conda-Forger App](https://sugatoray-conda-forger.streamlit.app/).
@@ -133,7 +135,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
