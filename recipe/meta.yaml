@@ -22,11 +22,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python >=3.8
     # Use pinned version (< 70.0.0) of setuptools to avoid error:
     # - source: https://github.com/aws-neuron/aws-neuron-sdk/issues/893
-    - setuptools==69.5.1
+    - setuptools ==69.5.1
     - wheel
     - pytorch
     - pip
