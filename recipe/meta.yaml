@@ -22,7 +22,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    #- {{ stdlib("c") }}
   host:
     - python >=3.8
     # Use pinned version (< 70.0.0) of setuptools to avoid error:
