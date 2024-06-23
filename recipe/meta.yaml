@@ -1,5 +1,5 @@
 {% set name = "tensordict" %}
-{% set version = "0.1.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -19,6 +19,10 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python >=3.8
     - setuptools
@@ -86,3 +90,4 @@ about:
 extra:
   recipe-maintainers:
     - sugatoray
+    - jan-janssen
