@@ -15,7 +15,6 @@ source:
 
 build:
   number: 0
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,13 +23,13 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - python >=3.8
+    - python
     - setuptools
     - wheel
     - pytorch
     - pip
   run:
-    - python >=3.8
+    - python
     - pytorch
     - numpy
     - cloudpickle
