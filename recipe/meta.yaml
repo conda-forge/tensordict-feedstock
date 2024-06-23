@@ -33,6 +33,7 @@ requirements:
     - pytorch
     - numpy
     - cloudpickle
+    - packaging
 
 test:
   imports:
