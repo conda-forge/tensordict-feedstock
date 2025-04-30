@@ -23,6 +23,8 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - cmake
+    - make
   host:
     - python
     - setuptools
