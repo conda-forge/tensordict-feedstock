@@ -1,5 +1,5 @@
 {% set name = "tensordict" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
   url: https://github.com/pytorch-labs/tensordict/archive/v{{ version }}.tar.gz
-  sha256: bb6bd835b845f7f184b31d75ed1663d30fa70203bb312387533eeb194246a86e
+  sha256: 4d9af76e8d8538e89967f00be84fc3048d72e43de941f052cf267d916091663e
 
 build:
   number: 0
@@ -23,6 +23,8 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - cmake
+    - make
   host:
     - python
     - setuptools
@@ -36,6 +38,7 @@ requirements:
     - cloudpickle
     - packaging
     - orjson
+    - importlib-metadata
 
 test:
   imports:
