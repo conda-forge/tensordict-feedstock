@@ -38,6 +38,7 @@ requirements:
     - cloudpickle
     - packaging
     - orjson
+    - importlib-metadata
 
 test:
   imports:
