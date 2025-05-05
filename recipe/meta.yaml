@@ -25,6 +25,7 @@ requirements:
     - {{ stdlib("c") }}
     - cmake
     - make
+    - ninja
   host:
     - python
     - setuptools
