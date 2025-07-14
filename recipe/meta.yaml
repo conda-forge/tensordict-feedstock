@@ -32,6 +32,7 @@ requirements:
     - wheel
     - pytorch
     - pip
+    - pyvers
   run:
     - python
     - pytorch
