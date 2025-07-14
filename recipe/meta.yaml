@@ -32,7 +32,6 @@ requirements:
     - wheel
     - pytorch
     - pip
-    - pyvers
   run:
     - python
     - pytorch
@@ -41,6 +40,7 @@ requirements:
     - packaging
     - orjson
     - importlib-metadata
+    - pyvers
 
 test:
   imports:
