@@ -12,12 +12,10 @@ source:
   # the source from PyPI.
   url: https://github.com/pytorch-labs/tensordict/archive/v{{ version }}.tar.gz
   sha256: e11984847f755ba97f29c318a232286defb5a4678f439151ff3a1baf1c221d3e
-  patches:
-    - version.patch
 
 build:
   number: 2
-  script: ls; cat version.txt; {{ PYTHON }} -m pip install . -vv
+  script: export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}; {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
 requirements:
