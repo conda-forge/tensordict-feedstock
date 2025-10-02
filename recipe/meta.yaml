@@ -14,8 +14,8 @@ source:
   sha256: e11984847f755ba97f29c318a232286defb5a4678f439151ff3a1baf1c221d3e
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
+  script: sed -i -e 's/dynamic = \["version"\]/version="{{ version }}"/g'  pyproject.toml; {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [win]
 
 requirements:
