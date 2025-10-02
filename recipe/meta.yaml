@@ -11,7 +11,7 @@ source:
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
   url: https://github.com/pytorch-labs/tensordict/archive/v{{ version }}.tar.gz
-  sha256: ffc5e111f14d0c0d1f9ab578846da5b58c7daa5f29dc5720585583b1d9a1e5ca
+  sha256: e11984847f755ba97f29c318a232286defb5a4678f439151ff3a1baf1c221d3e
 
 build:
   number: 1
