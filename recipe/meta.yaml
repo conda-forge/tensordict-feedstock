@@ -15,7 +15,7 @@ source:
 
 build:
   number: 2
-  script: sed -i -e 's/dynamic = \["version"\]/version={{ version }}/g'  pyproject.toml; {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: sed -i -e 's/dynamic = \["version"\]/version="{{ version }}"/g'  pyproject.toml; {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [win]
 
 requirements:
