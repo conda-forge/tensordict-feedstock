@@ -17,7 +17,7 @@ source:
 
 build:
   number: 2
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ls; cat version.txt; {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
 requirements:
