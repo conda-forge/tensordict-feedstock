@@ -22,12 +22,12 @@ abstracting away tailored operations:
 
 ```python
 for i, tensordict in enumerate(dataset):
-
-    tensordict = model(tensordict)
-    loss = loss_module(tensordict)
-    loss.backward()
-    optimizer.step()
-    optimizer.zero_grad()
+# the model reads and writes tensordicts
+tensordict = model(tensordict)
+loss = loss_module(tensordict)
+loss.backward()
+optimizer.step()
+optimizer.zero_grad()
 ```
 
 With this level of abstraction, one can recycle a training loop for highly heterogeneous task.
@@ -40,14 +40,13 @@ PyPI: [https://pypi.org/project/tensordict/](https://pypi.org/project/tensordict
 
 ---
 
-
+### **Conda-Forge Package Made with Conda-Forger App**: :zap:
 
 :fire: The conda-forge recipe was generated with [Conda-Forger App](https://sugatoray-conda-forger.streamlit.app/).
 
 :point_right: [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sugatoray-conda-forger.streamlit.app/)
 
 [_streamlit-conda-forger-app]: https://sugatoray-conda-forger.streamlit.app/
-
 
 Current build status
 ====================
@@ -74,13 +73,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18896&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tensordict-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18896&branchName=main">
@@ -106,13 +98,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18896&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tensordict-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.14.____cp314" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18896&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tensordict-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -318,7 +303,4 @@ Feedstock Maintainers
 
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@sugatoray](https://github.com/sugatoray/)
-
-
-<!-- dummy commit to enable rerendering -->
 
