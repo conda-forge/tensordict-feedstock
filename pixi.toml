@@ -5,7 +5,7 @@
 
 [workspace]
 name = "tensordict-feedstock"
-version = "2026.8.9"  # conda-smithy version used to generate this file
+version = "2026.9.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/tensordict-feedstock"
 authors = ["@conda-forge/tensordict"]
 channels = ["conda-forge"]
@@ -40,16 +40,7 @@ description = "Build tensordict-feedstock directly (without setup scripts), no p
 [feature.build.tasks.debug]
 cmd = "conda-build debug recipe"
 description = "Debug tensordict-feedstock directly (without setup scripts), no particular variant specified"
-[feature.build.tasks."build-linux_64_python3.10.____cpython"]
-cmd = "conda-build build recipe -m .ci_support/linux_64_python3.10.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.10.____cpython.yaml"
-description = "Build tensordict-feedstock with variant linux_64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_python3.10.____cpython"]
-cmd = "conda-build debug recipe -m .ci_support/linux_64_python3.10.____cpython.yaml"
-description = "Debug tensordict-feedstock with variant linux_64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.10.____cpython.yaml"
-description = "List contents of tensordict-feedstock packages built for variant linux_64_python3.10.____cpython"
-[feature.build.tasks."build-linux_64_python3.11.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/linux_64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.11.____cpython.yaml"
 description = "Build tensordict-feedstock with variant linux_64_python3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_python3.11.____cpython"]
@@ -58,7 +49,7 @@ description = "Debug tensordict-feedstock with variant linux_64_python3.11.____c
 [feature.build.tasks."inspect-linux_64_python3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant linux_64_python3.11.____cpython"
-[feature.build.tasks."build-linux_64_python3.12.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/linux_64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.12.____cpython.yaml"
 description = "Build tensordict-feedstock with variant linux_64_python3.12.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_python3.12.____cpython"]
@@ -67,7 +58,7 @@ description = "Debug tensordict-feedstock with variant linux_64_python3.12.____c
 [feature.build.tasks."inspect-linux_64_python3.12.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant linux_64_python3.12.____cpython"
-[feature.build.tasks."build-linux_64_python3.13.____cp313"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/linux_64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.13.____cp313.yaml"
 description = "Build tensordict-feedstock with variant linux_64_python3.13.____cp313 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_python3.13.____cp313"]
@@ -76,7 +67,7 @@ description = "Debug tensordict-feedstock with variant linux_64_python3.13.____c
 [feature.build.tasks."inspect-linux_64_python3.13.____cp313"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313.yaml"
 description = "List contents of tensordict-feedstock packages built for variant linux_64_python3.13.____cp313"
-[feature.build.tasks."build-linux_64_python3.14.____cp314"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/linux_64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_python3.14.____cp314.yaml"
 description = "Build tensordict-feedstock with variant linux_64_python3.14.____cp314 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_python3.14.____cp314"]
@@ -85,16 +76,7 @@ description = "Debug tensordict-feedstock with variant linux_64_python3.14.____c
 [feature.build.tasks."inspect-linux_64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.14.____cp314.yaml"
 description = "List contents of tensordict-feedstock packages built for variant linux_64_python3.14.____cp314"
-[feature.build.tasks."build-osx_64_python3.10.____cpython"]
-cmd = "conda-build build recipe -m .ci_support/osx_64_python3.10.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.10.____cpython.yaml"
-description = "Build tensordict-feedstock with variant osx_64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_python3.10.____cpython"]
-cmd = "conda-build debug recipe -m .ci_support/osx_64_python3.10.____cpython.yaml"
-description = "Debug tensordict-feedstock with variant osx_64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.10.____cpython.yaml"
-description = "List contents of tensordict-feedstock packages built for variant osx_64_python3.10.____cpython"
-[feature.build.tasks."build-osx_64_python3.11.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.11.____cpython.yaml"
 description = "Build tensordict-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_python3.11.____cpython"]
@@ -103,7 +85,7 @@ description = "Debug tensordict-feedstock with variant osx_64_python3.11.____cpy
 [feature.build.tasks."inspect-osx_64_python3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_64_python3.11.____cpython"
-[feature.build.tasks."build-osx_64_python3.12.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.12.____cpython.yaml"
 description = "Build tensordict-feedstock with variant osx_64_python3.12.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_python3.12.____cpython"]
@@ -112,7 +94,7 @@ description = "Debug tensordict-feedstock with variant osx_64_python3.12.____cpy
 [feature.build.tasks."inspect-osx_64_python3.12.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_64_python3.12.____cpython"
-[feature.build.tasks."build-osx_64_python3.13.____cp313"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.13.____cp313.yaml"
 description = "Build tensordict-feedstock with variant osx_64_python3.13.____cp313 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_python3.13.____cp313"]
@@ -121,7 +103,7 @@ description = "Debug tensordict-feedstock with variant osx_64_python3.13.____cp3
 [feature.build.tasks."inspect-osx_64_python3.13.____cp313"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_64_python3.13.____cp313"
-[feature.build.tasks."build-osx_64_python3.14.____cp314"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_python3.14.____cp314.yaml"
 description = "Build tensordict-feedstock with variant osx_64_python3.14.____cp314 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_python3.14.____cp314"]
@@ -130,16 +112,7 @@ description = "Debug tensordict-feedstock with variant osx_64_python3.14.____cp3
 [feature.build.tasks."inspect-osx_64_python3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.14.____cp314.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_64_python3.14.____cp314"
-[feature.build.tasks."build-osx_arm64_python3.10.____cpython"]
-cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.10.____cpython.yaml"
-description = "Build tensordict-feedstock with variant osx_arm64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_python3.10.____cpython"]
-cmd = "conda-build debug recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml"
-description = "Debug tensordict-feedstock with variant osx_arm64_python3.10.____cpython directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_python3.10.____cpython"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.10.____cpython.yaml"
-description = "List contents of tensordict-feedstock packages built for variant osx_arm64_python3.10.____cpython"
-[feature.build.tasks."build-osx_arm64_python3.11.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.11.____cpython.yaml"
 description = "Build tensordict-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_python3.11.____cpython"]
@@ -148,7 +121,7 @@ description = "Debug tensordict-feedstock with variant osx_arm64_python3.11.____
 [feature.build.tasks."inspect-osx_arm64_python3.11.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_arm64_python3.11.____cpython"
-[feature.build.tasks."build-osx_arm64_python3.12.____cpython"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.12.____cpython.yaml"
 description = "Build tensordict-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_python3.12.____cpython"]
@@ -157,7 +130,7 @@ description = "Debug tensordict-feedstock with variant osx_arm64_python3.12.____
 [feature.build.tasks."inspect-osx_arm64_python3.12.____cpython"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_arm64_python3.12.____cpython"
-[feature.build.tasks."build-osx_arm64_python3.13.____cp313"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.13.____cp313.yaml"
 description = "Build tensordict-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_python3.13.____cp313"]
@@ -166,7 +139,7 @@ description = "Debug tensordict-feedstock with variant osx_arm64_python3.13.____
 [feature.build.tasks."inspect-osx_arm64_python3.13.____cp313"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
 description = "List contents of tensordict-feedstock packages built for variant osx_arm64_python3.13.____cp313"
-[feature.build.tasks."build-osx_arm64_python3.14.____cp314"]
+[feature.build.tasks."build-"]
 cmd = "conda-build build recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_python3.14.____cp314.yaml"
 description = "Build tensordict-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_python3.14.____cp314"]
