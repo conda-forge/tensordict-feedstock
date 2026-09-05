@@ -1,28 +1,31 @@
-{% set name = "tensordict" %}
-{% set version = "0.14.0" %}
+schema_version: 1
+
+context:
+  name: tensordict
+  version: "0.14.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
   # NOTE:
   # The PyPI address does not have any package-source available yet
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
-  url: https://github.com/pytorch-labs/tensordict/archive/v{{ version }}.tar.gz
+  url: https://github.com/pytorch-labs/tensordict/archive/v${{ version }}.tar.gz
   sha256: 0b1e2913895daa931bfb7a3ab401f9cbd2fc9f8d23b61b1bc69c6a00383bb058
 
 build:
-  number: 0
-  script: sed -i -e 's/dynamic = \["version"\]/version="{{ version }}"/g'  pyproject.toml; {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: true  # [win]
+  number: 1
+  skip: win
+  script: sed -i -e 's/dynamic = \["version"\]/version="${{ version }}"/g'  pyproject.toml; ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
     - cmake
     - make
     - ninja
@@ -42,16 +45,13 @@ requirements:
     - importlib-metadata
     - pyvers
 
-test:
-  imports:
-    - tensordict
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - tensordict
+      pip_check: true
 
 about:
-  home: https://github.com/pytorch-labs/tensordict
   summary: TensorDict is a pytorch dedicated tensor container.
   license: MIT
   license_file: LICENSE
@@ -65,12 +65,12 @@ about:
 
     ```python
     for i, tensordict in enumerate(dataset):
-        # the model reads and writes tensordicts
-        tensordict = model(tensordict)
-        loss = loss_module(tensordict)
-        loss.backward()
-        optimizer.step()
-        optimizer.zero_grad()
+    # the model reads and writes tensordicts
+    tensordict = model(tensordict)
+    loss = loss_module(tensordict)
+    loss.backward()
+    optimizer.step()
+    optimizer.zero_grad()
     ```
 
     With this level of abstraction, one can recycle a training loop for highly heterogeneous task.
@@ -91,8 +91,9 @@ about:
 
     [_streamlit-conda-forger-app]: https://sugatoray-conda-forger.streamlit.app/
 
-  doc_url: https://pytorch-labs.github.io/tensordict/
-  dev_url: https://github.com/pytorch-labs/tensordict
+  homepage: https://github.com/pytorch-labs/tensordict
+  repository: https://github.com/pytorch-labs/tensordict
+  documentation: https://pytorch-labs.github.io/tensordict/
 
 extra:
   recipe-maintainers:
