@@ -13,43 +13,40 @@ source:
   # The PyPI address does not have any package-source available yet
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
-  url: https://github.com/pytorch-labs/tensordict/archive/v${{ version }}.tar.gz
+  url: https://github.com/pytorch/tensordict/archive/v${{ version }}.tar.gz
   sha256: 6ed29753e5d1592e5c6c1dba078271f713d2cc269856b9c0701f3e39d5c7830d
 
 build:
-  number: 0
-  skip: win
-  script: sed -i -e 's/dynamic = \["version"\]/version="${{ version }}"/g'  pyproject.toml; ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
+  noarch: python
+  script:
+    env:
+      SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
+    content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
-  build:
-    - ${{ compiler('cxx') }}
-    - ${{ compiler('c') }}
-    - ${{ stdlib("c") }}
-    - cmake
-    - make
-    - ninja
   host:
-    - python
-    - setuptools
-    - wheel
-    - pytorch
+    - python ${{ python_min }}.*
     - pip
+    - setuptools >=77
+    - wheel
   run:
-    - python
-    - pytorch
+    - python >=${{ python_min }}
+    - pytorch >=2.13.0
     - numpy
     - cloudpickle
     - packaging
     - orjson
-    - importlib-metadata
-    - pyvers
+    - pyvers >=0.2.0,<0.3.0
 
 tests:
   - python:
       imports:
         - tensordict
       pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: TensorDict is a pytorch dedicated tensor container.
