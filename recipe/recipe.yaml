@@ -17,7 +17,7 @@ source:
   sha256: caf97e41c557d13fe811b980e3c949f50327bce21ff83fa819dec78b87b45bb8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     env:
@@ -29,14 +29,11 @@ requirements:
     - python ${{ python_min }}.*
     - pip
     - setuptools >=77
-    - wheel
   run:
     - python >=${{ python_min }}
-    - pytorch >=2.13.0
+    - pytorch >=2.11.0
     - numpy
     - cloudpickle
-    - packaging
-    - orjson
     - pyvers >=0.2.0,<0.3.0
 
 tests:
