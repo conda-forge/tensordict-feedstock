@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tensordict
-  version: "0.15.4"
+  version: "0.15.5"
 
 package:
   name: ${{ name|lower }}
@@ -14,7 +14,7 @@ source:
   # Once the source is added there, change the recipe to build with
   # the source from PyPI.
   url: https://github.com/pytorch/tensordict/archive/v${{ version }}.tar.gz
-  sha256: 29022bcf90cc6fc613b5bc4f08bb079bb43179f525b57902f32248810aa7ac4e
+  sha256: fc906fb3291962cd7d3318ae039c348c27826e8713ce4e3da592ea06febb4fc3
 
 build:
   number: 0
